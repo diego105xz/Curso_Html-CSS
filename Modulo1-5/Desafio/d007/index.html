@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagem Flxível</title>
+    <link rel="shortcut icon" href="imagens/nerd.ico" type="image/x-icon">
+</head>
+<body>
+    <h1>Imagem Flexível</h1>
+    Você está vendo a imagem completa? Experimente ampliar o tamanho da sua janela para aproveitar a melhora experiência &#x1F913
+    <picture> <!--Redimencionamento só funcionar com PNG-->
+        <source media="(max-width: 750px)" srcset="imagens/carro-p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/carro-m.png" type="image/png">
+        <img src="imagens/carro-g.png" alt="imagem flexível">
+    </picture>
+    
+</body>
+</html>
