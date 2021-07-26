@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em HTML5</title>
+</head>
+<body>
+    <h1>Imagem dinâmica</h1>
+    <p>Tente abrir esse site em vários dispositivos diferentes ou simplesmente aumente e diminua o tamanho do seu navegador.</p>
+
+    <picture><!-- ordem do código tem que ser na menor imagen para maior.-->
+        <source media="(max-width:750px )" srcset="img/foto-p.png" type="image/png">
+        <source media="(max-width:1000px)" srcset="img/foto-m.png" type="image/png">
+        <img src="img/foto-g.png" alt="Imagem flexível">
+    </picture>   
+    <h1>Reproduzindo Áudio</h1>
+    <p>Vamos aprender a reproduzir áudios em HTML5.</p>
+    <audio src="midia/midia1.mp3" controls autoplay></audio><!--Formatos compativeis com navegadores-->
+
+    <h2>Segunda maneira de usar áudio</h2>
+    <audio preload="metadata" autoplay controls><!--Nem todos os navegadores suportam todos formatos de audio, neste caso use essa identação de código para o navegador tentar reproduzir, caso ele n~;ao consiga ele vai tentar o próximo formato de audio, caso ele não consiga nenhum vai aparecer a mensagem e a midia disponivel para download-->
+        <source src="midia/midia1.mp3" type="audio/mpeg">
+        <source src="midia/midia1.ogg" type="audio/ogg">
+        <source src="midia/midia1.wav" type="audio/wav">
+        <p>Infelizmente seu navegador não consegue reproduzir áudio. <a href="midia/midia1.mp3">Clique aqui para baixar o arquivo MP3</a></p>
+
+    </audio>
+</body>
+</html>
